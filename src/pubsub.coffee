@@ -15,8 +15,7 @@ class Pubsub
     @subs[evt]?
 
   unSub: (id, evt) ->
-    return if not @_isSubscribed evt
-    sub = @subs[evt]
+    return false if not @_isSubscribed evt
     newSubs = []
     for sub in @subs[evt]
       newSubs.push sub if sub.id isnt id
