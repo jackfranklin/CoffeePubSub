@@ -54,6 +54,7 @@ describe 'unsubscribing',  ->
     expect(myApp.subs["myEvent"]).to.not.be.ok
     expect(myApp.subs["myEvent2"]).to.be.ok
 
+
 describe 'a publish', ->
   myApp = new Pubsub
   myApp.sub "elem1", "event1", someFn
